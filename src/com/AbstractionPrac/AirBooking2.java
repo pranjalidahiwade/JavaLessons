@@ -1,5 +1,5 @@
 package com.AbstractionPrac;
-interface MakeMyTrip{
+interface MakeMyTrip2{
     //void getAvailableSeat();
     void getPrice();
     void getDate();
@@ -7,13 +7,13 @@ interface MakeMyTrip{
 
     }
 
-interface ThomasCook{
+interface ThomasCook2{
     void getAvailableSeat();
     void getPrice();
     void getDate();
     void getFlightNo();
 }
-abstract class AirIndia implements MakeMyTrip,ThomasCook{
+abstract class AirIndia2 implements MakeMyTrip2,ThomasCook2{
 
     @Override
     public void getAvailableSeat(){
@@ -32,7 +32,7 @@ abstract class AirIndia implements MakeMyTrip,ThomasCook{
         System.out.println("Air India-Flights are not available.");
     }
 }
-class GoAir implements MakeMyTrip,ThomasCook{
+class GoAir2 implements MakeMyTrip2,ThomasCook2{
     @Override
     public void getAvailableSeat() {
         System.out.println("GoAir- Seats are not available.");
@@ -53,7 +53,7 @@ class GoAir implements MakeMyTrip,ThomasCook{
         System.out.println("GoAir-Flights are not available.");
     }
 }
-class Indigo implements MakeMyTrip,ThomasCook{
+class Indigo2 implements MakeMyTrip2,ThomasCook2{
     @Override
     public void getAvailableSeat() {
         System.out.println("Indigo- Seats are not available.");
@@ -75,11 +75,11 @@ class Indigo implements MakeMyTrip,ThomasCook{
     }
 
 }
-public class AirBooking {
+public class AirBooking2{
     public static void main(String[] args){
-//MakeMyTrip ai= new AirIndia();
-MakeMyTrip ind=new Indigo();
-ThomasCook go=new GoAir();
+//MakeMyTrip2 ai= new AirIndia2();
+MakeMyTrip2 ind=new Indigo2();
+ThomasCook2 go=new GoAir2();
 //ai.getDate();
 go.getAvailableSeat();
 go.getFlightNo();
